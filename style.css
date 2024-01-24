@@ -1,0 +1,215 @@
+*{
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/* landing page*/
+
+.bar{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar>*{
+    padding:.75em;
+}
+
+.navtags{
+    display: flex;
+    width:50%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.navtags a{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 1em;
+    /* background-color: rgb(44, 43, 43); */
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.navtags a:hover{
+     background-color: whitesmoke;
+}
+
+.landingmain{
+   /*  height:100vh; */
+    background-color: blueviolet;
+    display: flex;
+}
+.landingmain .welcome{
+    padding: 2em;
+    width: 50vw;
+    height: 100vh;
+     display: flex;
+     flex-wrap: wrap; 
+     flex-direction: row;
+     justify-content: center;
+     align-content: center;
+}
+.welcome p{
+    flex-basis: 100%;
+}
+.welcome a{
+    text-decoration: none;
+    color: black;
+    margin: 3em;
+    padding:1em;
+    border: 2px solid black;
+    border-radius: 50px;
+    display: inline-block;
+}
+.welcome a:hover{
+    background-color: whitesmoke;
+}
+.landingmain .side {
+    width: 50vw;
+    height:100vh;
+    border: 2px solid red;
+   display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.landingmain .side .img{
+    width:75%;
+    height:50%;
+    border: 4px solid green;
+    border-radius: 50%;
+}
+
+ @media only screen and (max-width:600px) {
+    .landingmain{
+        flex-flow: wrap;
+        flex-direction: column-reverse;
+    }
+    .landingmain .welcome{
+        width: 100vw;
+        height: 100vh;
+    }
+    .landingmain .side{
+        width: 100vw;
+        height: 100vh;
+    }
+ }
+ 
+
+/*About Page*/
+.about{
+    background-color: brown;
+}
+.aboutheaddiv h1{
+    width: 300px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    padding-top: .75em;
+    margin: 0px auto; 
+}
+.about #abouthead{
+   /*  margin-top: 1em; */
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.about p{
+    margin: 2em;
+    line-height: 2;
+}
+.about .contact{
+   margin-top: 2em;
+   text-decoration: none;
+   padding:.75em;
+   background-color: blanchedalmond;
+   border-radius: 10px;
+   margin-left: 2em;
+}
+
+.about .aboutempty{
+    height: 15vh;
+}
+
+/* skills-page */
+.skill-page{
+    background-color: blanchedalmond;
+}
+.skills{
+    margin: 2em;
+    display:flex;
+    column-gap: 10vh;
+    row-gap: 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 3em;
+}
+
+.skill-head h1{
+    width: 300px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    padding-top: .75em;
+    margin: 0px auto; 
+    text-align: center;
+    font-size: 2.5em;
+}
+.skills .s-box{
+    border:2px solid black;
+    border-radius: 20px;
+    padding: 1em;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skills .s-box:hover{
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.s-box .progress-bar{
+    height:10%;
+    width:100%;
+    border:2px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, orange 30%, rgba(0,0,0,0) 20%);   
+}
+.skills .s-box:hover .progress-bar{
+    background-image: linear-gradient(to right, green 30%, rgba(0,0,0,0) 20%);   
+}
+
+
+/* projects page */
+
+.projects{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .project{
+    height:40vh;
+    width: 70vw;
+    border: 2px solid black;
+    align-items: center;
+    position:relative;
+}
+
+.project .about-project{
+    height:50px;
+    width:100px;
+    border: 2px solid black;
+    position:absolute;
+    top:90%;
+    left:95%;
+}
