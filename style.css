@@ -203,13 +203,29 @@
     border: 2px solid black;
     align-items: center;
     position:relative;
+    border-radius: 20px;
+    padding: 1em;
 }
 
 .project .about-project{
+    display: flex;
     height:50px;
     width:100px;
     border: 2px solid black;
     position:absolute;
     top:90%;
     left:95%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    text-decoration: none;
+    color: black;
 }
+
+@media only screen and (max-width:600px) {
+    .project .about-project{
+       left:5%;
+    }
+ }
+ 
