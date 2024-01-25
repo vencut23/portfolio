@@ -3,25 +3,28 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-/* landing page*/
-
+/* nav bar */
 .bar {
+    position: sticky;
+    top: 0%; 
+    width: 100vw;
     background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
-
 .bar>* {
     padding: .75em;
 }
 
+/* landing page*/
 .navtags {
     display: flex;
-    width: 50%;
-    flex-wrap: wrap;
+    min-width: 50%;
+    /* flex-wrap: wrap; */
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .navtags a {
@@ -106,8 +109,16 @@
         width: 100vw;
         height: 100vh;
     }
+    .navtags{
+        display: none;
+    }
 }
 
+:target::before {
+    content: "";
+    display: block;
+    
+}
 
 /*About Page*/
 .about {
@@ -118,7 +129,7 @@
     width: 300px;
     border-bottom: 2px solid red;
     padding-bottom: 10px;
-    padding-top: .75em;
+    padding-top: .75em; 
     margin: 0px auto;
 }
 
@@ -148,34 +159,60 @@
 }
 
 /* education page */
+.edu-head h1{
+    width: 300px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    padding-top: .75em;
+    margin: 0px auto;
+    text-align: center;
+}
 .education-page .edu {
     margin: 5em;
+    display: flex;
+    justify-content: center;
 }
 
 .edu .education-bar {
     height: 100vh;
     width: 10px;
     background-color: aqua;
-    position: relative;
+    flex-shrink: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.edu .education-bar .bar-points{
+     height: 20px;
+     width: 20px;
+     background-color: white;
+     border: 1px solid aqua;
+     border-radius: 20px;
+}
+.edu .content{
+    display:flex;
+    height: 100vh;
+    width: 70vh;
+    min-width: 30vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.edu .content .con h3{
+    padding-bottom : 1em;
 }
 
 
-.education-bar .content {
-    position: absolute;
-    display: flex;
-    left: 20px;
-}
-.content p{
-
-}
 /* skills-page */
 .skill-page {
     background-color: blanchedalmond;
 }
 
 .skills {
-    margin: 2em;
+    margin: 0em;
     display: flex;
     column-gap: 10vh;
     row-gap: 5vw;
@@ -184,6 +221,7 @@
     align-items: center;
     align-content: center;
     padding-bottom: 3em;
+    padding-top: 2em;
 }
 
 .skill-head h1 {
@@ -200,8 +238,8 @@
     border: 2px solid black;
     border-radius: 20px;
     padding: 1em;
-    height: 300px;
-    width: 300px;
+    height: 220px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -224,9 +262,27 @@
     background-image: linear-gradient(to right, green 30%, rgba(0, 0, 0, 0) 20%);
 }
 
+@media only screen and (max-width:450px) {
+    .skills .s-box{
+        height: 150px;
+        width:150px;
+    }
+    .skills{
+        column-gap: 2vh;
+        row-gap: 2vw;
+    }
+
+    .skills .s-box:hover {
+        box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+    }
+
+}
 
 /* projects page */
-
+.projects-page{
+   background-color: rgb(219, 128, 17);
+   padding-bottom: 3em;
+}
 .projects {
     margin: 2em;
     display: flex;
@@ -240,14 +296,15 @@
     width: 300px;
     border-bottom: 2px solid red;
     padding-bottom: 10px;
+    padding-top: 0.75em;
     margin: 0px auto;
     text-align: center;
     font-size: 2.5em;
 }
 
 .projects .project {
-    height: 70vh;
-    width: 70vw;
+     height: 70vh; 
+    width: 50vw;
     border: 2px solid black;
     align-items: center;
     position: relative;
@@ -266,12 +323,15 @@
 }
 
 .projects .img {
+    background-image: url(images.jpg);
+    background-size: cover;
+    background-position: center;
     height: 100%;
     width: 100%;
     border: 2px solid red;
     border-radius: 20px;
+    min-height: 50%;
 }
-
 .projects .pro-details p {
     padding: 2em;
 }
@@ -306,4 +366,24 @@
         left: 5%;
         top: 95%
     }
+    .projects .pro-details p{
+        display: none;
+    }
+    .projects .project{
+        height: 50vh;
+    }
 }
+
+@media only screen and (max-width:400px) {
+    .project .about-project {
+        left: 5%;
+        top: 95%
+    }
+    .projects .pro-details p{
+        display: none;
+    }
+    .projects .project{
+        height: 30vh;
+    }
+}
+
