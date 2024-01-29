@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Teko:wght@300&display=swap');
+:root{
+    --root-blue1: rgb(64, 190, 229); 
+    --root-white1: rgb(255, 255, 255);
+    --root-black1: rgb(11, 11, 11);
+    --root-black2: rgb(39, 37, 37);
+    --root-black3: rgb(34, 33, 33);
+}
 * {
     border: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    font-size:1rem;
 }
 html{
     scroll-behavior: smooth;
@@ -13,7 +24,7 @@ html{
     position: sticky;
     top: 0%; 
   /*  width: 100%; */ 
-    background-color: aqua;
+    background-color:var(--root-black1);
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -22,8 +33,13 @@ html{
 .bar>* {
     padding: .75em;   
 }
-.bar img{
+.bar h3{
+    color: aliceblue;
     width: 50%;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.75rem;
+     text-shadow: 3px 4px var(--root-blue1); 
+     text
 }
 .navtags {
     display: flex;
@@ -35,39 +51,48 @@ html{
  
 .navtags a {
     text-decoration: none;
-    color: black;
+    color: var(--root-blue1);
     margin-left: 30px;
     margin-top: 2px;
     margin-bottom: 2px;
     padding: 1em;
     /* background-color: rgb(44, 43, 43); */
-    border-radius: 30px;
-    border: 2px solid black;
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255);
 }
 .navtags a:hover {
-    background-color: whitesmoke;
+    background-color: rgb(181, 176, 176);
+     background-color: var(--root-white1);
 }
 
 .side-nav .buttons .nav-button{
-    background-color: cadetblue;
-    border: 1px solid black;
+    background-color: rgb(43, 45, 45);
+    border: 1px solid rgb(23, 22, 22);
     display: block;
     height: 30px;
     width: 30px;
     padding: 4px;
     border-radius: 3px;
     margin-bottom: 1px;
+     
+}
+.side-nav .buttons .nav-button:hover{
+    background-color: var(--root-blue1);
 }
 .side-nav .buttons{
    position: fixed;
-   top:10%;
+   top:15%;
    right: 0%;
    display: none;
 }
+
+
+
+
 /* landing page*/ 
 .landingmain {
     /*  height:100vh; */
-    background-color: blueviolet;
+    background-color: rgb(23, 22, 23);
     display: flex;
 }
 
@@ -81,23 +106,36 @@ html{
     justify-content: center;
     align-content: center;
 }
+.welcome .hey{
+    flex-basis: 100%;
+    padding-bottom: 1em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+    color: var(--root-white1);
+}
 
+.welcome .heyy{
+    color: var(--root-blue1);
+    text-shadow: 2px 2px var(--root-white1); 
+}
 .welcome p {
     flex-basis: 100%;
+    color: rgba(255, 253, 255, 0.907);
+    font-size: 1.5rem;
 }
 
 .welcome a {
     text-decoration: none;
-    color: black;
+    color: var(--root-blue1);
     margin: 3em;
     padding: 1em;
-    border: 2px solid black;
-    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
     display: inline-block;
 }
 
 .welcome a:hover {
-    background-color: whitesmoke;
+    background-color:var(--root-white1);
 }
 
 .landingmain .side {
@@ -120,6 +158,9 @@ html{
 }
 
 @media only screen and (max-width:600px) {
+    /* *{
+        font-size: 1rem;
+    } */
     .landingmain {
         flex-flow: wrap;
         flex-direction: column-reverse;
@@ -134,12 +175,7 @@ html{
         width: 100vw;
         height: 100vh;
     }
-    .navtags{
-        display: none;
-    }
-    .side-nav .buttons{
-        display: block;
-    }
+   
 }
 
 :target::before {
@@ -150,16 +186,18 @@ html{
 
 /*About Page*/
 .about {
-    background-color: brown;
+    background-color: var(--root-black3);
     scroll-margin: 60px;
 }
 
 .aboutheaddiv h1 {
-    width: 300px;
-    border-bottom: 2px solid red;
+    /* width: 300px; */
+   /*  border-bottom: 2px solid red; */
     padding-bottom: 10px;
     padding-top: .75em; 
     margin: 0px auto;
+    background-color:var(--root-black2);
+   
 }
 
 .about #abouthead {
@@ -172,66 +210,115 @@ html{
 .about p {
     margin: 2em;
     line-height: 2;
+    font-size: large;
+    color: var(--root-white1);
 }
 
 .about .contact {
     margin-top: 2em;
     text-decoration: none;
     padding: .75em;
-    background-color: blanchedalmond;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-left: 2em;
+    border: 2px solid rgb(255, 255, 255);
+    color: var(--root-blue1);
 }
-
+.about .contact:hover{
+    background-color: var(--root-white1);
+}
 .about .aboutempty {
     height: 15vh;
 }
 
 /* education page */
 .edu-head h1{
-    width: 300px;
-    border-bottom: 2px solid red;
+    /* width: 300px;
+    border-bottom: 2px solid red; */
+    font-size: 2.75rem;
+    text-transform: uppercase;
     padding-bottom: 10px;
     padding-top: .75em;
     margin: 0px auto;
     text-align: center;
+    background-color: var(--root-black2);
 }
-.education-page .edu {
-    margin: 5em;
-    display: flex;
-    justify-content: center;
+.education-page .edu{
+   height: 100vh;
+   margin: 5rem;
+   position: relative;
 }
-
-.edu .education-bar {
-    height: 100vh;
+.edu .education-bar{
+    height: 100%;
     width: 10px;
-    background-color: aqua;
-    flex-shrink: 0;
-    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    background-color: var(--root-black1);
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: center; */
+    border-radius: 20px;
 }
 .edu .education-bar .bar-points{
-     height: 20px;
-     width: 20px;
-     background-color: white;
-     border: 1px solid aqua;
-     border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    position: absolute;
 }
-.edu .content{
-    display:flex;
-    height: 100vh;
-    width: 70vh;
-    min-width: 30vh;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2em;
-}
+.edu .education-bar .bar-points .barp1{
+     top: 70px;
 
-.edu .content .con h3{
-    padding-bottom : 1em;
+}
+.edu .education-bar .bar-points .barp2{
+    top:50%;
+}
+.edu .education-bar .bar-points .barp3{
+    
+}
+@media only screen and (max-width:750px) {
+
+    .education-page .edu {
+        margin: 5em;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .edu .education-bar {
+        height: 100vh;
+        width: 10px;
+        background-color: aqua;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .edu .education-bar .bar-points{
+         height: 20px;
+         width: 20px;
+         background-color: white;
+         border: 1px solid aqua;
+         border-radius: 20px;
+    }
+    .edu .content{
+        display:flex;
+        height: 100vh;
+        width: 70vh;
+        min-width: 30vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2em;
+    }
+    
+    .edu .content .con h3{
+        padding-bottom : 1em;
+    }
+    
+
 }
 
 
@@ -418,3 +505,17 @@ html{
     }
 }
 
+@media only screen and (max-width:750px) {
+    .navtags{
+        display: none;
+    }
+    .side-nav .buttons{
+        display: block;
+    }
+    .about,.education-page,.skill-page,.projects-page{
+        scroll-margin: 40px;
+    }
+    .bar h3{
+        font-size: 1.2em;
+    }
+}
