@@ -3,6 +3,7 @@
 :root{
     --root-blue1: rgb(64, 190, 229); 
     --root-white1: rgb(255, 255, 255);
+    --root-white2: rgb(227, 223, 223);
     --root-black1: rgb(11, 11, 11);
     --root-black2: rgb(39, 37, 37);
     --root-black3: rgb(34, 33, 33);
@@ -41,6 +42,7 @@ html{
      text-shadow: 3px 4px var(--root-blue1); 
      text
 }
+
 .navtags {
     display: flex;
      width: 70%; 
@@ -210,16 +212,17 @@ html{
 .about p {
     margin: 2em;
     line-height: 2;
-    font-size: large;
+    font-size: 1.5em;
     color: var(--root-white1);
 }
 
 .about .contact {
     margin-top: 2em;
+    font-size: larger;
     text-decoration: none;
     padding: .75em;
     border-radius: 20px;
-    margin-left: 2em;
+    margin-left: 2.4em;
     border: 2px solid rgb(255, 255, 255);
     color: var(--root-blue1);
 }
@@ -242,9 +245,16 @@ html{
     text-align: center;
     background-color: var(--root-black2);
 }
+.education-page{
+    background-color: var(--root-black3);
+}
+@media only screen and (min-width:750px) {
+    
 .education-page .edu{
    height: 100vh;
-   margin: 5rem;
+   margin-top: 5rem;
+   margin-left: 5rem;
+   margin-right: 5rem;
    position: relative;
 }
 .edu .education-bar{
@@ -259,73 +269,71 @@ html{
     justify-content: space-evenly;
     align-items: center; */
     border-radius: 20px;
+   
 }
 .edu .education-bar .bar-points{
     height: 20px;
     width: 20px;
-    background-color: white;
-    border: 1px solid aqua;
+    background-color: var(--root-blue1);
+   border: 1px solid var(--root-black3);
     border-radius: 20px;
     position: absolute;
+    left: -4px;
 }
-.edu .education-bar .bar-points .barp1{
-     top: 70px;
-
+.edu .education-bar .bar-points.barp1{
+     top:10%
 }
-.edu .education-bar .bar-points .barp2{
-    top:50%;
+.edu .education-bar .bar-points.barp2{
+    top:45%;
 }
-.edu .education-bar .bar-points .barp3{
-    
-}
-@media only screen and (max-width:750px) {
-
-    .education-page .edu {
-        margin: 5em;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .edu .education-bar {
-        height: 100vh;
-        width: 10px;
-        background-color: aqua;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .edu .education-bar .bar-points{
-         height: 20px;
-         width: 20px;
-         background-color: white;
-         border: 1px solid aqua;
-         border-radius: 20px;
-    }
-    .edu .content{
-        display:flex;
-        height: 100vh;
-        width: 70vh;
-        min-width: 30vh;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding: 2em;
-    }
-    
-    .edu .content .con h3{
-        padding-bottom : 1em;
-    }
-    
-
+.edu .education-bar .bar-points.barp3{
+    top:75%;
+}  
+.edu .content{
+    position:relative;
+    left: 25%;
+    height: 100vh;
+    width:60vw;
+   
 }
 
+.edu .content .con1{
+    position: absolute;
+    top:9%;
+}
+.edu .content .con2{
+    position: absolute;
+    top:44%;
+}
+.edu .content .con3{
+    position: absolute;
+    top: 74%;
+}
+.edu .content p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--root-white1);
+    letter-spacing: 1px;
+}
+.edu .content span{
+    font-size: 1.3rem;
+    color: var(--root-white2);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.edu .content h3{
+    color: var(--root-blue1);
+    font-size: 2rem;
+}
+.education-page .edu-empty{
+    height: 5rem;
+}
+}
 
 /* skills-page */
 .skill-page {
     scroll-margin: 60px;
-    background-color: blanchedalmond;
+    background-color: var(--root-black3);
 }
 
 .skills {
@@ -342,17 +350,21 @@ html{
 }
 
 .skill-head h1 {
-    width: 300px;
-    border-bottom: 2px solid red;
+    /* width: 300px; */
+   /*  border-bottom: 2px solid red; */
+   background-color: var(--root-black2);
     padding-bottom: 10px;
     padding-top: .75em;
     margin: 0px auto;
     text-align: center;
     font-size: 2.5em;
+    text-transform: uppercase;
 }
 
 .skills .s-box {
-    border: 2px solid black;
+    font-size: x-large;
+    color: var(--root-white2);
+    border: 2px solid var(--root-white2);
     border-radius: 20px;
     padding: 1em;
     height: 220px;
@@ -364,19 +376,20 @@ html{
 }
 
 .skills .s-box:hover {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    box-shadow: 12px 12px 2px 1px rgba(27, 251, 251, 0.674);
 }
 
 .s-box .progress-bar {
     height: 10%;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--root-white2);
     border-radius: 10px;
-    background-image: linear-gradient(to right, orange 30%, rgba(0, 0, 0, 0) 20%);
+    background-image: linear-gradient(to right, var(--root-white2) 30%, rgba(0, 0, 0, 0) 20%);
 }
 
 .skills .s-box:hover .progress-bar {
-    background-image: linear-gradient(to right, green 30%, rgba(0, 0, 0, 0) 20%);
+    box-shadow: 2px 2px 2px 1px var(--root-white2);
+    background-image: linear-gradient(to right, var(--root-blue1) 30%, rgba(0, 0, 0, 0) 20%);
 }
 
 @media only screen and (max-width:450px) {
@@ -390,9 +403,13 @@ html{
     }
 
     .skills .s-box:hover {
-        box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+        box-shadow: 4px 4px 2px 1px var(--root-blue1);
     }
-
+   
+.skills .s-box:hover .progress-bar {
+    box-shadow: 2px 2px 2px 1px var(--root-white2);
+    background-image: linear-gradient(to right, var(--root-blue1) 30%, rgba(0, 0, 0, 0) 20%);
+}
 }
 
 /* projects page */
@@ -505,6 +522,7 @@ html{
     }
 }
 
+ /* side nav tag media query */
 @media only screen and (max-width:750px) {
     .navtags{
         display: none;
@@ -519,3 +537,113 @@ html{
         font-size: 1.2em;
     }
 }
+
+
+/* education page media quiery */
+@media only screen and (max-width:750px) {
+
+    .education-page .edu {
+        margin: 5em;
+        display: flex;
+    }
+    
+    .edu .education-bar {
+        height: 100vh;
+        width: 10px;
+        background-color: var(--root-blue1);
+        border-radius: 20px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .edu .education-bar .bar-points{
+         height: 20px;
+         width: 20px;
+         background-color: var(--root-black2);
+         border: 1px solid var(--root-blue1);
+         border-radius: 20px;
+    }
+    .edu .content{
+        display:flex;
+        height: 100vh;
+        width: 70vh;
+        min-width: 30vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2em;
+    }
+    
+    .edu .content p{
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--root-white1);
+       /*  letter-spacing: .75px; */
+    }
+    .edu .content span{
+        color: var(--root-white2);
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+    }
+    .edu .content h3{
+        font-size: 1.2rem;
+        color: var(--root-blue1);
+    }
+    .education-page .edu-empty{
+        height: 5rem;
+    }
+}
+
+/* certifications-page */
+.certifications-page .certifi-head h1{
+    width: 300px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    padding-top: 0.75em;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.certifi{
+    height: 100vh;
+    display: flex;
+    gap: 5vw;
+    margin: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.certifi-hover{
+    height: 100%;
+    width: 50vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.certifi-display{
+    height: 50%;
+    width: 50vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+}
+
+.certifi-hover .certificate{
+    margin: .5em;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+.certifi-display .certifi-img{
+    margin: 1rem;
+    border: 2px solid black;
+}
+
