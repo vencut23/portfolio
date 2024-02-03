@@ -16,6 +16,7 @@
     box-sizing: border-box;
     font-family: 'Teko', sans-serif;
     font-size: 1rem;
+    transition: 0.2s;
 }
 
 html {
@@ -153,20 +154,34 @@ html {
 .landingmain .side {
     width: 50vw;
     height: 100vh;
-    border: 2px solid red;
+   /*  border: 2px solid red; */
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
+     /* align-content: center; */
 }
 
 .landingmain .side .img {
-    width: 75%;
+   /*  width: 75%;
     height: 50%;
     border: 4px solid green;
     /* border-radius: 50%; */
-    background-image: url(images.jpg);
+  /*  background-image: url(images.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+   /*  margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem; */
+    /*   border: 2px solid rgb(0, 0, 0); */
+    /* background-image: url(images.jpg); */
+    /*   background-size: contain; */
+    /* background-repeat: no-repeat; */
+    height: 60%;
+    object-fit: contain;
+    /* height: 100%; */
+    width: 70%;
+    vertical-align: middle;
 }
 
 @media only screen and (max-width:600px) {
@@ -185,6 +200,7 @@ html {
     }
 
     .landingmain .side {
+        align-items: center;
         width: 100vw;
         height: 100vh;
     }
@@ -440,7 +456,7 @@ html {
     }
 }
 
-/* -----------------------------projects page -------------------------------*/
+/* -----------------------------projects page ------------------------------------------------------------*/
 .projects-page {
     background-color:var(--root-black3);
     padding-bottom: 3em;
@@ -511,8 +527,15 @@ html {
 
 .projects .pro-details p {
     padding: 2em;
+    color: var(--root-white1);
+    font-size: 1.1rem;
 }
 
+.projects .pro-details h1{
+    color: var(--root-blue1);
+    font-size: 1.2rem;
+    text-align: center;
+}
 .project .about-project {
     display: flex;
     height: 50px;
@@ -524,21 +547,28 @@ html {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: var(--root-blue1);
     text-decoration: none;
     color: black;
+    font-weight:bold;
+    letter-spacing: 1px;
 }
 
 
-.projects .project:nth-child(odd) .about-project {
+.projects .project:nth-child(odd) .about-project:hover {
+    background-color: var(--root-white2);
     box-shadow: 7px 7px 2px 1px rgba(228, 232, 233, 0.5);
 }
 
-.projects .project:nth-child(even) .about-project {
+.projects .project:nth-child(even) .about-project:hover {
+    background-color: var(--root-white2);
     box-shadow: 7px 7px 2px 1px rgba(237, 241, 241, 0.5);
 }
 
 @media only screen and (max-width:600px) {
+    .projects{
+        gap:10vh;
+    }
     .project .about-project {
         left: 5%;
         top: 95%
@@ -657,11 +687,10 @@ html {
 /*----------------------------------------------certifications-page ----------------------------------------*/
 .certifications-page{
    padding-bottom: 5rem;
-   background-color: rgb(226, 136, 1);
+   background-color: var(--root-black3);
 }
 .certifications-page .certifi-head h1 {
-    width: 300px;
-    border-bottom: 2px solid red;
+    background-color: var(--root-black2);
     padding-bottom: 10px;
     padding-top: 0.75em;
     margin: 0px auto;
@@ -682,7 +711,7 @@ html {
 .certifi-hover {
     /* height: 100%; */
     width: 40vw;
-    border: 2px solid black;
+    border: 2px solid var(--root-white1);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -693,20 +722,25 @@ html {
 
 .certifi-hover .certificate {
     margin: .5em;
-    border: 2px solid black;
+    border: 2px solid  var(--root-white1);
     border-radius: 10px;
     padding: 4px;
     display: block;
     text-decoration: none;
     text-align: center;
     position: relative;
+    color: var(--root-blue1);
+    font-size: 1.3rem;
 }
 
 .certifi-hover .certificate .certifi-button {
     z-index: 1;
-    background-color: blue;
+    border: 2px solid var(--root-black2);
+    background-color: var(--root-white1);
     position: absolute;
     left: 75%;
+    font-size: .75em;
+    font-weight: bold;
 }
 
 .certifi-hover .certifi-display0 {
@@ -856,7 +890,8 @@ html {
 
 /* -----------------------------------------contact me Page------------------------------------------- */
 .contactme-page{
-    background-color: rgb(235, 235, 2);
+    scroll-margin: 80px;
+    background-color: var(--root-blue1);
 }
 .contactme-cont{
     display: flex;
@@ -867,7 +902,7 @@ html {
 .container{
    width: 50%;
    height:100%;
-   border:2px solid red;
+  /*  border:2px solid var(--root-white1); */
    display:flex;
    justify-content: center;
    align-items: center;
@@ -881,11 +916,13 @@ html {
    flex-flow: column;
    gap: 20px;
 }
-
+.left h2{
+    font-size: 1.2rem;
+}
 .left .contacts h1{
     font-size: 3rem;
     padding-bottom: .5rem;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--root-white1);
 }
 
 .socialhandles a:hover img{
@@ -927,6 +964,9 @@ html {
     font-size: 1.2rem;
 }
 @media only screen and (max-width:600px){
+    .contactme-page{
+        scroll-margin: 38px;
+    }
     .container{
        margin: 1em;
     }
@@ -944,4 +984,6 @@ html {
    padding: 1rem;
    text-align: center;
    font-size: 1.2em;
+   background-color: var(--root-black3);
+   color: var(--root-white2);
 }
